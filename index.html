@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>長距離通勤マスター｜10年超の通勤経験から厳選するグッズ＆イヤホン情報</title>
+  <meta name="description" content="10年以上の長距離通勤経験をもとに、本当に役立つイヤホン・ノイキャン・通勤グッズを紹介するブログです。">
+  <style>
+    /* ===== リセット & 基本設定 ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      font-size: 18px;
+      line-height: 1.9;
+      color: #222;
+      background: #f0f4ff;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ===== カラー変数 ===== */
+    :root {
+      --navy: #0f1f3d;
+      --orange: #ff5e00;
+      --orange2: #ffab00;
+      --orange-light: #fff3e0;
+      --blue-light: #e8f0ff;
+      --gray: #777;
+      --border: #d8dff0;
+      --white: #fff;
+    }
+
+    /* ===== ヘッダー ===== */
+    header {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      font-size: 28px;
+    }
+    .logo-text {
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .logo-text span {
+      color: var(--orange);
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+    nav a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover {
+      color: var(--orange);
+      border-bottom-color: var(--orange);
+    }
+
+    /* ===== ヒーローセクション ===== */
+    .hero {
+      background: linear-gradient(135deg, #0f1f3d 0%, #1a3a6e 40%, #ff5e00 120%);
+      color: var(--white);
+      padding: 90px 20px 100px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      background: rgba(255,94,0,0.15);
+      border-radius: 50%;
+      top: -250px; right: -150px;
+      filter: blur(40px);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      background: rgba(255,171,0,0.12);
+      border-radius: 50%;
+      bottom: -150px; left: -80px;
+      filter: blur(40px);
+    }
+    .hero-badge {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      color: white;
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      padding: 8px 22px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(255,94,0,0.5);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.35;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.88);
+      max-width: 580px;
+      margin: 0 auto 40px;
+      line-height: 1.9;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 16px 28px;
+      backdrop-filter: blur(4px);
+    }
+    .stat-num {
+      font-size: 2.6rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.75);
+      margin-top: 4px;
+    }
+
+    /* ===== コンテナ共通 ===== */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 1.3em;
+      background: linear-gradient(180deg, var(--orange), var(--orange2));
+      border-radius: 4px;
+      margin-right: 14px;
+      vertical-align: middle;
+    }
+    .section-sub {
+      color: var(--gray);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      padding-left: 22px;
+    }
+
+    /* ===== カテゴリセクション ===== */
+    .categories {
+      padding: 64px 20px;
+      background: var(--white);
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .cat-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 32px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+      border: 2px solid var(--border);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    }
+    .cat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(255,94,0,0.18);
+      border-color: var(--orange);
+      background: linear-gradient(135deg, #fff8f5 0%, #fff 100%);
+    }
+    .cat-icon { font-size: 2.6rem; }
+    .cat-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .cat-desc {
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .cat-count {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: white;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      padding: 4px 14px;
+      border-radius: 20px;
+      align-self: flex-start;
+    }
+
+    /* ===== おすすめ記事セクション ===== */
+    .featured {
+      padding: 64px 20px;
+      background: var(--f7f8fa);
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .article-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    }
+    .article-thumb {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      background: linear-gradient(135deg, var(--navy) 0%, #2e4a7a 100%);
+    }
+    .article-body {
+      padding: 20px;
+    }
+    .article-tag {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .article-title {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+    .article-excerpt {
+      font-size: 0.9rem;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+    .article-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: white;
+      background: linear-gradient(90deg, var(--orange), var(--orange2));
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding: 8px 18px;
+      border-radius: 30px;
+      transition: gap 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(255,94,0,0.3);
+    }
+    .article-card:hover .article-link {
+      gap: 10px;
+      box-shadow: 0 6px 20px rgba(255,94,0,0.45);
+    }
+
+    /* ===== プロフィールセクション ===== */
+    .profile {
+      padding: 64px 20px;
+      background: var(--navy);
+      color: var(--white);
+    }
+    .profile-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .profile-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--orange), #f7a055);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 20px rgba(244,124,32,0.4);
+    }
+    .profile-content h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+    .profile-content .title {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+    }
+    .profile-content p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.9;
+    }
+    .profile-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .profile-tag {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* ===== Amazonアフィリエイト注意書き ===== */
+    .disclaimer {
+      background: var(--orange-light);
+      border-left: 4px solid var(--orange);
+      padding: 16px 20px;
+      margin: 32px 0 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.82rem;
+      color: #7a5a30;
+    }
+
+    /* ===== フッター ===== */
+    footer {
+      background: #111827;
+      color: rgba(255,255,255,0.55);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 0.82rem;
+    }
+    footer a {
+      color: rgba(255,255,255,0.55);
+      margin: 0 8px;
+    }
+    footer a:hover { color: var(--orange); }
+    .footer-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .footer-logo span { color: var(--orange); }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 640px) {
+      nav { display: none; }
+      .hero { padding: 52px 20px 64px; }
+      .hero-stats { gap: 24px; }
+      .profile-inner { flex-direction: column; align-items: center; text-align: center; }
+      .profile-tags { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== ヘッダー ===== -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">🚃</span>
+      <span class="logo-text">長距離通勤<span>マスター</span></span>
+    </div>
+    <nav>
+      <a href="#categories">カテゴリ</a>
+      <a href="#articles">記事一覧</a>
+      <a href="#profile">プロフィール</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== ヒーロー ===== -->
+<section class="hero">
+  <div class="hero-badge">🏅 通勤歴10年以上の経験者が運営</div>
+  <h1>
+    長い通勤時間を<br>
+    <em>最高の自分時間</em>に変える。
+  </h1>
+  <p>
+    毎日2〜3時間の通勤を10年以上続けた筆者が、<br>
+    本当に使って良かったイヤホン・通勤グッズを正直レビューします。
+  </p>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">10年+</span>
+      <span class="stat-label">長距離通勤経験</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">50+</span>
+      <span class="stat-label">試したグッズ数</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">全品</span>
+      <span class="stat-label">自腹レビュー</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== カテゴリ ===== -->
+<section class="categories" id="categories">
+  <div class="container">
+    <h2 class="section-title">カテゴリ</h2>
+    <p class="section-sub">通勤ライフをアップデートするジャンル別まとめ</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <span class="cat-icon">🎧</span>
+        <span class="cat-name">イヤホン・ノイキャン</span>
+        <span class="cat-desc">電車の騒音をシャットアウト。集中力を上げる最強ヘッドホン特集</span>
+        <span class="cat-count">▶ 記事を見る</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">🎒</span>
+        <span class="cat-name">通勤バッグ・収納</span>
+        <span class="cat-desc">荷物が多いサラリーマン必見。疲れないバッグの選び方</span>
+        <span class="cat-count">▶ 記事を見る</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">😴</span>
+        <span class="cat-name">快眠・リラックス</span>
+        <span class="cat-desc">帰りの電車で回復。ネックピロー・アイマスクのリアルレビュー</span>
+        <span class="cat-count">▶ 記事を見る</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">📱</span>
+        <span class="cat-name">スマホ・充電グッズ</span>
+        <span class="cat-desc">モバイルバッテリーからケーブルまで、通勤で本当に使えるもの</span>
+        <span class="cat-count">▶ 記事を見る</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">📚</span>
+        <span class="cat-name">電子書籍・学習</span>
+        <span class="cat-desc">通勤時間を「学びの時間」に。Kindle・Audibleの使い方</span>
+        <span class="cat-count">▶ 記事を見る</span>
+      </div>
+      <div class="cat-card">
+        <span class="cat-icon">☕</span>
+        <span class="cat-name">保温ボトル・軽食</span>
+        <span class="cat-desc">駅コンビニに毎日寄らなくなった！コスパ最強の水筒紹介</span>
+        <span class="cat-count">▶ 記事を見る</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 記事一覧 ===== -->
+<section class="featured" id="articles">
+  <div class="container">
+    <h2 class="section-title">おすすめ記事</h2>
+    <p class="section-sub">実際に使った経験をもとにした正直レビュー</p>
+    <div class="articles-grid">
+
+      <div class="article-card">
+        <div class="article-thumb">🎧</div>
+        <div class="article-body">
+          <span class="article-tag">イヤホン・ノイキャン</span>
+          <h3 class="article-title">10年通勤した私が厳選！ノイキャンイヤホンおすすめ5選【2024年最新】</h3>
+          <p class="article-excerpt">電車・バスの騒音対策に本当に効くのはどれ？実際に全部試した筆者が正直にレビューします。</p>
+          <a href="article.html" class="article-link">記事を読む →</a>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-thumb">🎒</div>
+        <div class="article-body">
+          <span class="article-tag">通勤バッグ</span>
+          <h3 class="article-title">肩が痛くならない通勤バッグ3選｜毎日2時間通勤者が本気で選んだ</h3>
+          <p class="article-excerpt">腰痛・肩こり持ちのサラリーマンが、軽くて丈夫で見た目も良いバッグを厳選しました。</p>
+          <a href="#" class="article-link">近日公開 →</a>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <div class="article-thumb">😴</div>
+        <div class="article-body">
+          <span class="article-tag">快眠グッズ</span>
+          <h3 class="article-title">帰りの電車で爆睡できる！ネックピロー比較レビュー【5製品を徹底比較】</h3>
+          <p class="article-excerpt">安いものから高級品まで、実際に乗車中に使った正直な感想をお伝えします。</p>
+          <a href="#" class="article-link">近日公開 →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="disclaimer">
+      ※ 当ブログはAmazonアソシエイトに参加しています。記事内のリンクから購入いただくと、筆者に少額の報酬が発生します（読者様の購入金額は変わりません）。
+    </div>
+  </div>
+</section>
+
+<!-- ===== プロフィール ===== -->
+<section class="profile" id="profile">
+  <div class="container">
+    <div class="profile-inner">
+      <div class="profile-avatar">🧑</div>
+      <div class="profile-content">
+        <h2>管理人：マスター</h2>
+        <p class="title">長距離通勤歴10年以上のサラリーマン</p>
+        <p>
+          都内勤務のサラリーマンで、片道1.5〜2時間の通勤を10年以上続けてきました。
+          これまで試した通勤グッズは50点以上。「どうせ毎日乗るなら、快適に過ごしたい」という思いから、
+          本当に使えるものだけを正直にレビューするブログを始めました。<br><br>
+          すべて自腹で購入した実体験をもとにしているので、忖度なしでお伝えします！
+        </p>
+        <div class="profile-tags">
+          <span class="profile-tag">🚃 長距離通勤歴10年+</span>
+          <span class="profile-tag">🎧 イヤホンオタク</span>
+          <span class="profile-tag">📚 通勤読書派</span>
+          <span class="profile-tag">☕ コーヒー持参派</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== フッター ===== -->
+<footer>
+  <div class="footer-logo">🚃 長距離通勤<span>マスター</span></div>
+  <p>© 2024 長距離通勤マスター All Rights Reserved.</p>
+  <p style="margin-top:10px;">
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">お問い合わせ</a>
+    <a href="#">サイトマップ</a>
+  </p>
+</footer>
+
+</body>
+</html>
