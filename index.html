@@ -348,6 +348,12 @@
       font-size: 3rem;
       flex-shrink: 0;
       box-shadow: 0 4px 20px rgba(244,124,32,0.4);
+      overflow: hidden;
+    }
+    .profile-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .profile-content h2 {
       font-size: 1.4rem;
@@ -646,7 +652,7 @@
 <section class="profile" id="profile">
   <div class="container">
     <div class="profile-inner">
-      <div class="profile-avatar">🧑</div>
+      <div class="profile-avatar"><img src="avatar.jpg" alt="管理人アバター"></div>
       <div class="profile-content">
         <h2>管理人：マスター</h2>
         <p class="title">長距離通勤歴10年以上のサラリーマン</p>
