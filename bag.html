@@ -154,10 +154,13 @@
 
     .toc ol {
       list-style: none;
+      padding-left: 0;
+      list-style: none;
       counter-reset: toc-counter;
       padding: 0;
     }
 
+    .toc li::before { content: "・"; margin-right: 4px; }
     .toc li {
       counter-increment: toc-counter;
       margin-bottom: 6px;
