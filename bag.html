@@ -155,22 +155,17 @@
     .toc ol {
       list-style: none;
       padding-left: 0;
-      list-style: none;
-      counter-reset: toc-counter;
-      padding: 0;
+      margin: 0 0 0 20px;
     }
 
-    .toc li::before { content: "・"; margin-right: 4px; }
     .toc li {
-      counter-increment: toc-counter;
       margin-bottom: 6px;
       font-size: 0.88rem;
     }
 
     .toc li::before {
-      content: counter(toc-counter) ". ";
-      color: var(--orange);
-      font-weight: 700;
+      content: "・";
+      margin-right: 4px;
     }
 
     .toc a {
