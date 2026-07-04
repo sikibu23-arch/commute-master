@@ -643,6 +643,17 @@
       この記事では、長距離通勤歴20年以上の筆者が実際に使ってみた保温ボトルの中から、特に優秀な3本を厳選してご紹介します。朝自宅で作ったコーヒーやお茶が、電車の中でも熱々・冷え冷えのままキープできる、そんな快適な通勤ライフを一緒に手に入れましょう。
     </div>
 
+    <!-- ▼ プライムデー2026 訴求（7/13終了後は自動非表示） -->
+    <div class="pd-2026" style="margin: 28px 0; padding: 22px 24px; background: linear-gradient(135deg, #232f3e 0%, #37475a 100%); border-radius: 14px; color: #fff;">
+      <div class="pd-2026-title" style="font-size: 1.08rem; font-weight: 700; margin-bottom: 8px;">⚡ Amazonプライムデー2026 まもなく開催！</div>
+      <p style="margin: 0 0 14px; font-size: 0.93rem; line-height: 1.75; color: #dfe4e8;">
+        先行セール <strong style="color: #ffb84d;">7/7(火)0:00〜</strong>／本セール <strong style="color: #ffb84d;">7/10(金)〜7/13(月)</strong>。
+        この記事で紹介しているグッズもセール対象になる可能性大。気になっていたものがあるなら、今週が1年で一番の買い時です。
+      </p>
+      <a href="https://www.amazon.co.jp/events/primeday?tag=commutemaster-22" target="_blank" rel="noopener" style="display: inline-block; background: #ff9900; color: #131921; font-weight: 700; font-size: 0.95rem; padding: 11px 22px; border-radius: 8px; text-decoration: none;">プライムデー会場をチェック →</a>
+    </div>
+
+
     <!-- Ranking Table -->
     <h2 id="ranking">📊 保温ボトル3選｜比較一覧表</h2>
 
@@ -911,5 +922,15 @@
   </div>
 </footer>
 
+    <script>
+      (function () {
+        var now = Date.now();
+        if (now > new Date('2026-07-13T23:59:59+09:00').getTime()) {
+          document.querySelectorAll('.pd-2026').forEach(function (el) { el.style.display = 'none'; });
+        } else if (now >= new Date('2026-07-07T00:00:00+09:00').getTime()) {
+          document.querySelectorAll('.pd-2026-title').forEach(function (el) { el.textContent = '⚡ Amazonプライムデー2026 開催中！'; });
+        }
+      })();
+    </script>
 </body>
 </html>

@@ -472,6 +472,17 @@
   </div>
 </section>
 
+<!-- ===== プライムデー2026 バナー（7/13終了後は自動非表示） ===== -->
+<section class="pd-2026" style="background: linear-gradient(135deg, #232f3e 0%, #37475a 100%); padding: 34px 20px;">
+  <div style="max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px 32px; text-align: center;">
+    <div>
+      <div class="pd-2026-title" style="color: #fff; font-size: 1.25rem; font-weight: 800; margin-bottom: 6px;">⚡ Amazonプライムデー2026 まもなく開催！</div>
+      <div style="color: #dfe4e8; font-size: 0.92rem; line-height: 1.7;">先行セール <strong style="color: #ffb84d;">7/7(火)0:00〜</strong>／本セール <strong style="color: #ffb84d;">7/10(金)〜7/13(月)</strong><br>通勤グッズを買うなら、1年で一番お得な7日間です。</div>
+    </div>
+    <a href="https://www.amazon.co.jp/events/primeday?tag=commutemaster-22" target="_blank" rel="noopener" style="display: inline-block; background: #ff9900; color: #131921; font-weight: 700; font-size: 0.98rem; padding: 13px 28px; border-radius: 8px; text-decoration: none; white-space: nowrap;">セール会場を見る →</a>
+  </div>
+</section>
+
 <!-- ===== カテゴリ ===== -->
 <section class="categories" id="categories">
   <div class="container">
@@ -684,5 +695,15 @@
   <p style="margin-top:12px; font-size:0.72rem; color:rgba(255,255,255,0.35);">当サイトはAmazonアソシエイト・プログラムに参加しています。</p>
 </footer>
 
+<script>
+  (function () {
+    var now = Date.now();
+    if (now > new Date('2026-07-13T23:59:59+09:00').getTime()) {
+      document.querySelectorAll('.pd-2026').forEach(function (el) { el.style.display = 'none'; });
+    } else if (now >= new Date('2026-07-07T00:00:00+09:00').getTime()) {
+      document.querySelectorAll('.pd-2026-title').forEach(function (el) { el.textContent = '⚡ Amazonプライムデー2026 開催中！'; });
+    }
+  })();
+</script>
 </body>
 </html>
