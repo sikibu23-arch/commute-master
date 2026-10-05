@@ -642,14 +642,14 @@
           毎日の長距離通勤で「バッグが重くて肩が限界」「荷物が多すぎて整理できない」と悩んでいませんか？通勤歴20年の私が痛感したのは、バッグ選びが通勤疲労を大きく左右するということ。PCやモバイルバッテリー、弁当箱、着替えなど荷物が増えがちな通勤者こそ、収納設計と背負い心地にこだわる必要があります。今回は実際に試してよかった通勤バッグを厳選3つ、正直な評価でご紹介します。
         </p>
 
-    <!-- ▼ プライムデー2026 訴求（7/13終了後は自動非表示） -->
+    <!-- ▼ プライム感謝祭 訴求（10/19終了後は自動非表示） -->
     <div class="pd-2026" style="margin: 28px 0; padding: 22px 24px; background: linear-gradient(135deg, #232f3e 0%, #37475a 100%); border-radius: 14px; color: #fff;">
-      <div class="pd-2026-title" style="font-size: 1.08rem; font-weight: 700; margin-bottom: 8px;">⚡ Amazonプライムデー2026 まもなく開催！</div>
+      <div class="pd-2026-title" style="font-size: 1.08rem; font-weight: 700; margin-bottom: 8px;">⚡ Amazonプライム感謝祭 まもなく開催！</div>
       <p style="margin: 0 0 14px; font-size: 0.93rem; line-height: 1.75; color: #dfe4e8;">
-        先行セール <strong style="color: #ffb84d;">7/7(火)0:00〜</strong>／本セール <strong style="color: #ffb84d;">7/10(金)〜7/13(月)</strong>。
-        この記事で紹介しているグッズもセール対象になる可能性大。気になっていたものがあるなら、今週が1年で一番の買い時です。
+        先行セール <strong style="color: #ffb84d;">10/13(火)0:00〜</strong>／本セール <strong style="color: #ffb84d;">10/16(金)〜10/19(月)</strong>。
+        通勤バッグもセール対象になることがあります。長く使うものだからこそ、気になっていたモデルがあれば、セール中の価格を一度チェックしてみてください（対象商品・価格は日々変わります）。
       </p>
-      <a href="https://www.amazon.co.jp/events/primeday?tag=commutemaster-22" target="_blank" rel="noopener" style="display: inline-block; background: #ff9900; color: #131921; font-weight: 700; font-size: 0.95rem; padding: 11px 22px; border-radius: 8px; text-decoration: none;">プライムデー会場をチェック →</a>
+      <a href="https://www.amazon.co.jp/primeappreciation?&amp;linkCode=ll2&amp;tag=commutemaster-22&amp;linkId=3825d7dcff5f3a93c1ee700c82983676&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener" style="display: inline-block; background: #ff9900; color: #131921; font-weight: 700; font-size: 0.95rem; padding: 11px 22px; border-radius: 8px; text-decoration: none;">プライム感謝祭の会場をチェック →</a>
     </div>
 
 
@@ -926,10 +926,16 @@
     <script>
       (function () {
         var now = Date.now();
-        if (now > new Date('2026-07-13T23:59:59+09:00').getTime()) {
+        var T = function (d) { return new Date(d + '+09:00').getTime(); };
+        var setTitle = function (t) {
+          document.querySelectorAll('.pd-2026-title').forEach(function (el) { el.textContent = t; });
+        };
+        if (now > T('2026-10-19T23:59:59')) {
           document.querySelectorAll('.pd-2026').forEach(function (el) { el.style.display = 'none'; });
-        } else if (now >= new Date('2026-07-07T00:00:00+09:00').getTime()) {
-          document.querySelectorAll('.pd-2026-title').forEach(function (el) { el.textContent = '⚡ Amazonプライムデー2026 開催中！'; });
+        } else if (now >= T('2026-10-16T00:00:00')) {
+          setTitle('⚡ Amazonプライム感謝祭 開催中！');
+        } else if (now >= T('2026-10-13T00:00:00')) {
+          setTitle('⚡ Amazonプライム感謝祭 先行セール開催中！');
         }
       })();
     </script>
